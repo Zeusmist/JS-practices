@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>sTrinG TO NUMBer</title>
+    
+    </head>
+    <body>
+        <center>
+            <h1>CONVERT A STRING TO NUMBER</h1>
+            <h4>Click submit once to check current type.<br/>
+            Double click submit to convert and see new type.</h4>
+            <form onsubmit="return false" autocomplete="off">
+                <input type="text" id="inputs" placeholder="Enter a number"/>
+                <input type="submit" onclick="func()" ondblclick="func2()" />
+                <input type="button" onclick="clean()" value="Clear Results"/>
+            </form>
+            <p>ONE CLICK RESPONSE WOULD APPEAR HERE</p>
+            <p>DOUBLE CLICK RESPONSE WOULD APPEAR HERE</p>
+        </center>
+        
+        <script>
+            var inputs = document.getElementById('inputs').value;
+            var response = document.getElementsByTagName('p');
+            
+            function func()
+            {
+                if(inputs == String())
+                    {
+                        response[0].innerHTML= typeof inputs;
+                    }
+                else
+                    {
+                        inputs = String(inputs);
+                        response[0].innerHTML= typeof inputs;
+                    }
+            }
+            function func2()
+            {
+                inputs = parseInt(inputs);
+                response[1].innerHTML = typeof inputs;
+            }
+            function clean()
+            {
+                response[0].innerHTML = "ONE CLICK RESPONSE WOULD APPEAR HERE";
+                response[1].innerHTML = "DOUBLE CLICK RESPONSE WOULD APPEAR HERE";
+            }
+        
+        </script>
+    </body>
+
+</html>

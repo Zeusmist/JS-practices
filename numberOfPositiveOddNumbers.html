@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>nuMbeR oF pOsitiVe OdD NumbERS</title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1>KNOW THE NUMBER OF POSITIVE ODD NUMBERS BELOW A NUMBER</h1>
+            <form onsubmit="return false">
+                <input id="number" type="number" placeholder="Enter number" />
+                <input type="submit" value="Check" onclick="func()" />
+            </form>
+            <p>RESPONSE WOULD APPEAR HERE</p>
+            <p></p>
+            
+        </center>
+        <script>
+            function func()
+            {
+                var number = document.getElementById('number').value;
+                var Regex = /[\-]/;
+                var response = document.getElementsByTagName('p');
+                
+                if(Regex.test(number))
+                    {
+                        response[0].style.color = "red";
+                        response[0].innerHTML = "Number must be positive";
+                    }
+                else
+                    {
+                        response[0].style.color = "black"
+                        var result = parseInt(number/2);
+                        response[0].innerHTML = "There are " + result + " odd numbers below " + number;
+                        var trial = new Array()
+                        for(var i = 1; i < number; i += 2)
+                            {
+                                trial.push(i);
+                            }
+                        response[1].innerHTML = "[ " + trial + " ]";
+                    }
+                
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Weather</title>
+    </head>
+    <body>
+        
+        <script>
+            var weather = prompt("What is the weather condition? RAIN, SNOW or SUN", "");
+            
+            var rain = "Do you have a car? YES or NO";
+            var rainYes = "Enjoy your ride.";
+            var rainNo = "Call a uber or use an umbrella";
+
+            var sun = "Do you have an umbrella? YES or NO";
+            var sunYes = "Please use it.";
+            var sunNo = "Go and borrow.";
+            
+            var snow = "Do you have a CAR, JACKET or NONE of the above";
+            var snowCar = "Have a safe ride";
+            var snowJacket = "Feel free to use it";
+            var snowNone = "Stay indoors";
+            
+            if (weather.toLowerCase() == "rain"){
+                var rainQuest = prompt(rain, "");
+                if (rainQuest.toLowerCase() == "yes"){
+                alert(rainYes);
+                }else if (rainQuest.toLowerCase() == "no"){
+                    alert(rainNo);
+                } else{alert("Invalid choice for rain");}
+            }
+            if (weather.toLowerCase() == "sun"){
+                var sunQuest = prompt(sun, "");
+                if (sunQuest.toLowerCase() == "yes"){
+                alert(sunYes);
+            } else {alert(sunNo);}
+            }
+            if (weather.toLowerCase() == "snow"){
+                var snowQuest = prompt(snow, "");
+                if (snowQuest.toLowerCase() == "car"){
+                    alert(snowCar);
+                }else if (snowQuest.toLowerCase() == "jacket"){
+                    alert(snowJacket);
+                } else if (snowQuest.toLowerCase() == "none"){
+                    alert(snowNone);
+                } else {alert("Invalid choice for snow.");}
+            }
+            if (weather.toLowerCase() != "rain" && weather.toLowerCase() != "snow" && weather.toLowerCase() != "sun"){
+                alert("Invalid choice");
+            }
+//            
+//            
+//            
+//            
+//            
+//            
+//            
+//            
+//           
+//            
+        
+        
+        
+        </script>
+    
+    </body>
+</html>

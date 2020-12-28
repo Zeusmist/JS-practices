@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Friend Or Foe?</title>
+    </head>
+    <body>
+        
+<!--
+        <script>
+            var list = new Array("David", "Susan", "Dave", "Timothy", "Fred", "Jane");
+            
+            var listString = list.toString();
+            var listExec = /[a-zA-Z]{4}/.exec(listString);
+            document.write(listExec);
+            
+        
+        </script>
+-->
+<!--
+TRIAL 2 START
+        <form onsubmit="func()">
+            <input type="text"/>
+            <input type="text"/>
+            <input type="text"/>
+            <input type="submit" value="CHECK STATUS"/>
+        </form>
+        
+        <script>
+            function func()
+            {
+                var inputs = document.getElementsByTagName('input').value;
+                var inputsExp = /[a-zA-Z]{4}/;
+                var stringed = String(inputs.split(''));
+                
+                if(inputsExp.test(inputs))
+                    {
+                        document.write("stringed");
+                    }
+                else
+                    {
+                        document.write("NOT A FRIEND");
+                    }
+            }
+        
+        </script>
+TRIAL 2 END
+-->
+<!--
+TRIAL 3 START        
+        <form>
+            <input type="text"/>
+            <input type="text"/>
+            <input type="text"/>
+            <input type="submit" value="CHECK STATUS"/>
+        </form>
+        <button onclick="func(this)">CHECK RESULT</button>
+        <p id="frnd"></p>
+        
+        <script>
+            function func(friends)
+            {
+                var inputs = document.getElementsByTagName('input').value;
+                var length = friends.length;
+                var i;
+                
+                for (i = 0; i < length; i++)
+                    {
+                        if(friends[i].length == 4)
+                            {
+                                inputs.push(friends[i]);
+                            }
+                    }
+                return inputs;
+                document.getElementById('frnd').innerHTML = document.write(friends);
+            }
+            
+        </script>
+TRIAL 3 END
+-->
+            <form onsubmit="return false" autocomplete="off">
+                <input id="input1" type="text"/><br/>
+                <input id="input2" type="text"/><br/>
+                <input id="input3" type="text"/><br/>
+                <input id="input4" type="text"/><br/>
+                <input id="input5" type="text"/><br/>
+                <input type="submit" onclick="func()" value="CHECK RESULT"/>
+            </form>
+<!--            <button onclick="func()">CHECK RESULT</button>-->
+            
+            <p id="frnd"></p>
+            
+            <script>
+                var inputs = document.getElementsByTagName('input');
+                
+                
+//                var everyone = ["David", "Dave", "Erinayo", "Erin", "Obidu"]
+                function filtered(len)
+                {
+                    return len.length == 4;
+                }
+                function func()
+                {
+                    var everyone = [inputs[0].value, inputs[1].value, inputs[2].value, inputs[3].value, inputs[4].value];
+                    var friends = everyone.filter(filtered);
+                    document.getElementById('frnd').innerHTML = "Your friends are : " + friends;
+                }
+            
+            </script>
+        
+        
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

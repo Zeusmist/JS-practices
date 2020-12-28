@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>nUmBer OF stAiRs TO BE ClimbEd</title>
+        <style>
+            form{line-height: 1px;}
+            h5{margin-top: -5px}
+            input{position: relative;top: -14px}
+        
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1>NUMBER OF STAIRS TO BE CLIMBED</h1>
+            <form onsubmit="return false">
+                <h5>Monday</h5>
+                <input type="number"/><br/>
+                <h5>Tuesday</h5>
+                <input type="number"/><br/>
+                <h5>Wednesday</h5>
+                <input type="number"/><br/>
+                <h5>Thursday</h5>
+                <input type="number"/><br/>
+                <h5>Friday</h5>
+                <input type="number"/><br/>
+                <h5>Saturday</h5>
+                <input type="number"/><br/>
+                <h5>Sunday</h5>
+                <input type="number"/><br/>
+                <h4>Number of Years</h4>
+                <input type="number"/><br/>
+                <input type="submit" onclick="func()"/>
+            </form>
+            <p>Total stairs a week would appear here.</p>
+            <p>Total stairs a year would appear here.</p>
+            <p>Total stairs at you desired number of years would appear here.</p>
+        </center>
+        
+        <script>
+            var week = document.getElementsByTagName('input');
+            var response = document.getElementsByTagName('p');
+            
+            function func()
+            {
+                var weekTotal = 0;
+                var numYears = Number(week[7].value);
+                for(var i = 0; i < 7; i++)
+                    {
+                        weekTotal += Number(week[i].value);
+                    }
+                response[0].innerHTML = "Total stairs a week is " + weekTotal;
+                var aYear = weekTotal * 52;
+                response[1].innerHTML = "Total stairs a year is " + aYear;
+                var numYearsResult = aYear * numYears;
+                response[2].innerHTML = "Total stairs for " + numYears + " years is " + numYearsResult;
+            }
+        
+        
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>fiBseIve BiRtHdAy GiFt</title>
+        <style>
+        
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1>FIBSIEVE'S BIRTHDAY GIFT</h1>
+            <h4 style="margin-top:-10px">Enter n'th second to see which light would come on (Tip:1-25)</h4>
+            <form onsubmit="return false" autocomplete="off">
+                <input id="inputs" type="number" min="1"/>
+                <input type="submit" value="check" onclick="func()"/>
+            </form>
+            
+            <div id="box" style="width: 250px; height:250px; border:5px solid; margin-top:20px;position:relative">
+                <div id="box25" class="boxes" style="position:absolute; border:solid 1px black; height:50px; width:50px; margin-left:0px"></div>
+                <div id="box24" class="boxes" style="position:absolute; border:solid 1px black; height:50px; width:50px; margin-left:50px"></div>
+                <div id="box23" class="boxes" style="position:absolute; border:solid 1px black; height:50px; width:50px; margin-left:100px"></div>
+                <div id="box22" class="boxes" style="position:absolute; border:solid 1px black; height:50px; width:50px; margin-left:150px"></div>
+                <div id="box21" class="boxes" style="position:absolute; border:solid 1px black; height:50px; width:50px; margin-left:200px"></div>
+                <div id="box20" class="boxes" style="position:absolute; border:solid 1px black; height:50px; width:50px; margin-left:200px; margin-top:50px"></div>
+                <div id="box19" class="boxes" style="position:absolute; border:solid 1px black; height:50px; width:50px; margin-left:200px; margin-top:100px"></div>
+                <div id="box18" class="boxes" style="position:absolute; border:solid 1px black; height:50px; width:50px; margin-left:200px; margin-top:150px"></div>
+                <div id="box17" class="boxes" style="position:absolute; border:solid 1px black; height:50px; width:50px; margin-left:200px; margin-top:200px"></div>
+                <div id="box16" class="boxes" style="position:absolute; border:solid 1px black; height:50px; width:50px; margin-left:150px; margin-top:200px"></div>
+                <div id="box15" class="boxes" style="position:absolute; border:solid 1px black; height:50px; width:50px; margin-left:150px; margin-top:150px"></div>
+                <div id="box14" class="boxes" style="position:absolute; border:solid 1px black; height:50px; width:50px; margin-left:150px; margin-top:100px"></div>
+                <div id="box13" class="boxes" style="position:absolute; border:solid 1px black; height:50px; width:50px; margin-left:150px; margin-top:50px"></div>
+                <div id="box12" class="boxes" style="position:absolute; border:solid 1px black; height:50px; width:50px; margin-left:100px; margin-top:50px"></div>
+                <div id="box11" class="boxes" style="position:absolute; border:solid 1px black; height:50px; width:50px; margin-left:50px; margin-top:50px"></div>
+                <div id="box10" class="boxes" style="position:absolute; border:solid 1px black; height:50px; width:50px; margin-left:0px; margin-top:50px"></div>
+                <div id="box9" class="boxes" style="position:absolute; border:solid 1px black; height:50px; width:50px; margin-left:0px; margin-top:100px"></div>
+                <div id="box8" class="boxes" style="position:absolute; border:solid 1px black; height:50px; width:50px; margin-left:50px; margin-top:100px"></div>
+                <div id="box7" class="boxes" style="position:absolute; border:solid 1px black; height:50px; width:50px; margin-left:100px; margin-top:100px"></div>
+                <div id="box6" class="boxes" style="position:absolute; border:solid 1px black; height:50px; width:50px; margin-left:100px; margin-top:150px"></div>
+                <div id="box5" class="boxes" style="position:absolute; border:solid 1px black; height:50px; width:50px; margin-left:100px; margin-top:200px"></div>
+                <div id="box4" class="boxes" style="position:absolute; border:solid 1px black; height:50px; width:50px; margin-left:50px; margin-top:200px"></div>
+                <div id="box3" class="boxes" style="position:absolute; border:solid 1px black; height:50px; width:50px; margin-left:50px; margin-top:150px"></div>
+                <div id="box2" class="boxes" style="position:absolute; border:solid 1px black; height:50px; width:50px; margin-left:0px; margin-top:150px"></div>
+                <div id="box1" class="boxes" style="position:absolute; border:solid 1px black; height:50px; width:50px; margin-left:0px; margin-top:200px"></div>
+            </div>
+        </center>
+        
+        <script>
+            function func()
+            {
+                var inputs = document.getElementById('inputs').value;
+                inputs = Number(inputs);
+                var box = document.getElementsByClassName('boxes');
+                var box1 = document.getElementById('box1');
+                var box2 = document.getElementById('box2');
+                var box3 = document.getElementById('box3');
+                var box4 = document.getElementById('box4');
+                var box5 = document.getElementById('box5');
+                var box6 = document.getElementById('box6');
+                var box7 = document.getElementById('box7');
+                var box8 = document.getElementById('box8');
+                var box9 = document.getElementById('box9');
+                var box10 = document.getElementById('box10');
+                var box11 = document.getElementById('box11');
+                var box12 = document.getElementById('box12');
+                var box13 = document.getElementById('box13');
+                var box14 = document.getElementById('box14');
+                var box15 = document.getElementById('box15');
+                var box16 = document.getElementById('box16');
+                var box17 = document.getElementById('box17');
+                var box18 = document.getElementById('box18');
+                var box19 = document.getElementById('box19');
+                var box20 = document.getElementById('box20');
+                var box21 = document.getElementById('box21');
+                var box22 = document.getElementById('box22');
+                var box23 = document.getElementById('box23');
+                var box24 = document.getElementById('box24');
+                var box25 = document.getElementById('box25');
+                function hold()
+                {
+                    for(var i = 0; i < box.length; i++)
+                        {box[i].style.backgroundColor = "white";}
+                }
+                switch(inputs)
+                    {
+                        case 1:
+                            hold();
+                            box1.style.backgroundColor = "red";
+                            break;
+                        case 2:
+                            hold();
+                            box2.style.backgroundColor = "blue";
+                            break;
+                        case 3:
+                            hold();
+                            box3.style.backgroundColor = "blue";
+                            break;
+                        case 4:
+                            hold();
+                            box4.style.backgroundColor = "blue";
+                            break;
+                        case 5:
+                            hold();
+                            box5.style.backgroundColor = "brown";
+                            break;
+                        case 6:
+                            hold();
+                            box6.style.backgroundColor = "brown";
+                            break;
+                        case 7:
+                            hold();
+                            box7.style.backgroundColor = "brown";
+                            break;
+                        case 8:
+                            hold();
+                            box8.style.backgroundColor = "brown";
+                            break;
+                        case 9:
+                            hold();
+                            box9.style.backgroundColor = "brown";
+                            break;
+                        case 10:
+                            hold();
+                            box10.style.backgroundColor = "green";
+                            break;  
+                        case 11:
+                            hold();
+                            box11.style.backgroundColor = "green";
+                            break;
+                        case 12:
+                            hold();
+                            box12.style.backgroundColor = "green";
+                            break;
+                        case 13:
+                            hold();
+                            box13.style.backgroundColor = "green";
+                            break;
+                        case 14:
+                            hold();
+                            box14.style.backgroundColor = "green";
+                            break;
+                        case 15:
+                            hold();
+                            box15.style.backgroundColor = "green";
+                            break;
+                        case 16:
+                            hold();
+                            box16.style.backgroundColor = "green";
+                            break;
+                        case 17:
+                            hold();
+                            box17.style.backgroundColor = "yellow";
+                            break;
+                        case 18:
+                            hold();
+                            box18.style.backgroundColor = "yellow";
+                            break;
+                        case 19:
+                            hold();
+                            box19.style.backgroundColor = "yellow";
+                            break;
+                        case 20:
+                            hold();
+                            box20.style.backgroundColor = "yellow";
+                            break;
+                        case 21:
+                            hold();
+                            box21.style.backgroundColor = "yellow";
+                            break;
+                        case 22:
+                            hold();
+                            box22.style.backgroundColor = "yellow";
+                            break;
+                        case 23:
+                            hold();
+                            box23.style.backgroundColor = "yellow";
+                            break;
+                        case 24:
+                            hold();
+                            box24.style.backgroundColor = "yellow";
+                            break;
+                        case 25:
+                            hold();
+                            box25.style.backgroundColor = "yellow";
+                            break;
+                        default:
+                            hold();
+                            break;
+                    }
+            }
+            
+        </script>
+    </body>
+
+</html>

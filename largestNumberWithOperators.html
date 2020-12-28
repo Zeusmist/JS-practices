@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>LargESt NuMbErs WiTH OpERAtOrs</title>
+    </head>
+    <body>
+        <form onsubmit="return false">
+            <input type="number"/>
+            <input type="number"/>
+            <input type="number"/>
+            <input type="submit" onclick="calcu()"/>
+        
+        </form>
+        <p id="demo"></p>
+        <script>
+            var demo = document.getElementById('demo');
+            var inputs = document.getElementsByTagName('input');
+            var a;
+            var b;
+            var c;
+            var largest;
+// CORRECT TRIAL           function calcu()
+//            {
+//                largest = 0;
+//                a = Number(inputs[0].value);
+//                b = Number(inputs[1].value);
+//                c = Number(inputs[2].value);
+//                var t1 = a + b + c;
+//                var t2 = a + b * c;
+//                var t3 = a * b * c;
+//                var t4 = a * (b + c);
+//                var t5 = a * b + c;
+//                var t6 = (a + b) * c;
+//                var tog = [t1, t2, t3, t4, t5, t6];
+////                tog = tog.sort();
+//                for (var i = 0; i <= largest; i++)
+//                    {
+//                        if(tog[i]>largest)
+//                            {
+//                                largest = tog[i];
+//                            }
+//                    }
+//                demo.innerHTML = largest;
+//            }
+// ANSWER           function expressionMatter(a, b, c) {
+//  return Math.max(
+//    a + b + c,
+//    a * b * c,
+//    a * (b + c),
+//    (a + b) * c,
+//    a + b * c,
+//    a * b + c,
+//  );
+//}
+        </script>
+    </body>
+</html>

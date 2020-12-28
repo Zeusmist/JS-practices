@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>TItle TRansItion</title>
+        <style>
+            #background
+            {
+                background-color: black;
+                width: 200px;
+                
+            }
+            .title, .JS
+            {
+                color: white;
+                font-size: 40px;
+            }
+        
+        
+        </style>
+    </head>
+    <body>
+        <center>
+            <div id="background">
+                <span class="JS">J</span>
+                <span class="title">ava</span>
+                <span class="JS">S</span>
+                <span class="title">cript</span>
+        
+        
+            </div>
+            <button onclick="func()" ondblclick="func2()">CLICK ME</button>
+        </center>
+        
+        <script>
+            var backGround = document.getElementById('background');
+            var titles = document.getElementsByClassName("title");
+            var JS = document.getElementsByClassName('JS');
+            
+            function func()
+            {
+                backGround.style.width = "600px";
+                backGround.style.backgroundImage = "url('musician-playing-guitar.jpg')";
+                backGround.style.transition = "4s";
+                
+                for(var t = 0; t < titles.length; t++)
+                    {
+                        titles[t].style.fontSize = "100px";
+                        titles[t].style.transition = "4s";
+                    }
+                for(var j = 0; j < JS.length; j++)
+                    {
+                        JS[j].style.fontFamily = "cursive";
+                        JS[j].style.fontSize = "150px";
+                        JS[j].style.color = "blue";
+                        JS[j].style.transition = "4s";
+                    }
+            }
+            
+            function func2()
+            {
+                backGround.style.width = "200px";
+                backGround.style.backgroundImage = "none";
+                background.style.transition = "4s";
+                
+                for (var t = 0; t < titles.length; t++)
+                    {
+                        titles[t].style.fontSize = "40px";
+                        titles[t].style.transition = "4s";
+                    }
+                for (var j = 0; j < JS.length; j++)
+                    {
+                        JS[j].style.fontFamily = "inherit";
+                        JS[j].style.fontSize = "40px";
+                        JS[j].style.color = "white";
+                        JS[j].style.transition = "4s";
+                    }
+                
+            }
+        </script>
+    
+    </body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>MASKIFy</title>
+    </head>
+    <body>
+        
+        <form onsubmit="func()">
+            <input type="text" id="inputs"/>
+            <input type="submit"/>
+        
+        </form>
+        
+        <script>
+            var inputs = document.getElementById('inputs').value;
+            var inputed = /[A-Za-z0-9]/;
+//            var sliced = inputs.slice(-100,-4);
+//            var replaced = sliced(/[A-Za-z0-9]/g,"#");
+            function func()
+            {
+                if(inputed.test(inputs))
+                    {
+                        document.write(inputs);
+                    }
+                else
+                    {
+                        alert("Something is wrong!")
+                    }
+            }
+        
+        </script>
+    </body>
+
+</html>

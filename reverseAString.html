@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>reVerinG a StriNg</title>
+    </head>
+    <body>
+        <center>
+            <h1>REVERSE WORDS</h1>
+            <form onsubmit="return false" autocomplete="off">
+                <input type="text" id="inputs" placeholder="Enter letters"/>
+                <input type="submit" onclick="func()" value="REVERSE IT"/>
+            </form>
+            <p>RESULT WOULD APPEAR HERE</p>
+            
+            <script>
+                function func()
+                {
+                    var inputs = document.getElementById('inputs').value;
+                    var response = document.getElementsByTagName('p');
+                    var inputstring = /[0-9]/;
+                    if(inputstring.test(inputs))
+                        {
+                            response[0].style.color = "red";
+                            response[0].innerHTML = "!! Numbers not allowed";
+                        }
+                    else
+                        {
+                            response[0].style.color = "black";
+                            var change = inputs.split('').reverse().join('');
+                            response[0].innerHTML = change;
+                        }
+                }
+            
+            </script>
+        
+        </center>
+    </body>
+
+</html>

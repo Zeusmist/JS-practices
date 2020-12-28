@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>mulTiplY eveN NumbERS bY 8</title>
+        <style>
+            button{border-radius: 50px}
+            input
+            {
+                height: 30px;
+                border-radius: 10px;
+/*                padding: 0px 0px 0px 50px;*/
+            }
+        </style>
+    
+    </head>
+    <body>
+        <center>
+            <h3>EVEN NUMBERS would be multiplied by 8 and ODD NUMBERS would be multiplied by 9 </h3>
+            <form onsubmit="return false">
+                <input id="inputbox" type="number" placeholder="Enter a number"/><br/>
+                <input type="submit" onclick="func()" value="CHECK RESULT"/>
+            </form>            
+            <p id="response">RESPONSE WOULD APPEAR HERE</p>
+        </center>
+        
+        <script>
+            function func()
+            {
+                var number = document.getElementById('inputbox').value;
+                
+                var response = document.getElementById('response');
+                var by8 = number * 8;
+                var by9 = number * 9;
+                
+                if(number % 2 == 0)
+                    {
+                        response.innerHTML = number + " is an EVEN NUMBER<br/>" + number + " multiplied by 8 is " + by8;
+                    }
+                else
+                    {
+                        response.innerHTML = number + " is an ODD NUMBER<br/>" + number + " multiplied by 9 is " + by9;
+                    }
+            }
+        
+        
+        </script>
+    </body>
+
+
+
+</html>
